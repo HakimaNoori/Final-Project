@@ -68,7 +68,7 @@ height: 50px;
     background-color: #b3244f; /* Darker blue for hover effect */
   }
   
-  .head{
+  /* .head{
     margin-left: 15%;
     margin-top: 50px;
   }
@@ -95,4 +95,40 @@ height: 50px;
   }
   .moveimg img:hover{
    transform: scale(1.1);
+  } */
+
+
+  
+        
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .movie {
+    width: 150px;
+    text-align: center;
+  }
+  .movie img {
+    width: 100%;
+    height: 240px;
+    border-radius: 8px;
+    transition: all 2s 0s;
+  }
+  .movie img:hover{
+    transform: scale(1.1);
+  }
+  .movie h3 {
+    font-size: 14px;
+    margin-top: 8px;
   }
