@@ -37,7 +37,7 @@ async function fetchAllMovies() {
 }
 
 function displayMovies(movies) {
-  moviesContainer.innerHTML = ""; // Clear the container
+  moviesContainer.innerHTML = ""; 
   movies.forEach((movie) => {
     const movieElement = document.createElement("div");
     movieElement.classList.add("movie");
@@ -53,8 +53,7 @@ function displayMovies(movies) {
 fetchAllMovies();
 
 
-
-
+// Search section
 
 const searchInput = document.getElementById("searchInput");
 const searchForm = document.getElementById("search-box");
@@ -70,7 +69,6 @@ async function searchMovies(query) {
     console.error("Error searching for movies:", error);
   }
 }
-
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
