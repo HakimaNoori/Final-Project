@@ -51,3 +51,31 @@ function displayMovies(movies) {
 
 // Fetch and display all movies
 fetchAllMovies();
+
+
+
+
+
+const searchInput = document.getElementById("searchInput");
+const searchForm = document.getElementById("search-box");
+
+// Search for movies based on query
+async function searchMovies(query) {
+  try {
+    const response = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+    const data = await response.json();
+    console.log("Search results:", data.results);
+    displayMovies(data.results);
+  } catch (error) {
+    console.error("Error searching for movies:", error);
+  }
+}
+
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const query = searchInput.value.trim();
+  if (query) {
+    searchMovies(query);
+  }
+});
