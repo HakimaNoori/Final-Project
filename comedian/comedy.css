@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.nav{
+    display: flex;
+    width: 100%;
+    background-color: rgb(5, 7, 16);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    justify-content: space-between;
+    padding-right: 10px;
+    position: fixed;
+    height: 50px;
+    }
+    .pagelink{
+        margin-top: 12px;
+        
+    }
+    .pagelink a{
+        width:6%;
+        margin-right: 20px;
+        color: rgb(246, 246, 240);
+        font-size: 18px;
+        text-align: center;
+         padding: 8px;
+         transition: all 1s 0s;
+         border-radius: 10px;
+    }
+    .pagelink a:hover{
+        background-color:rgb(112, 133, 226);
+        font-size: 22px;
+        color: black;
+    }
