@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./action.css" />
+    <title>Action movies</title>
+  </head>
+  <body
+    class="bg-cover bg-fixed bg-no-repeat"
+    style="background-image: url('../images/action-bg.webp')"
+  >
+    <!-- Navigation -->
+    <nav
+      class="flex w-full bg-[rgb(5,7,16)] text-white justify-between pr-2 fixed h-12 items-center z-50 pb-2"
+    >
+      <img src="/images/logo2.png" alt="Logo" class="w-20 h-12" />
+      <div class="mt-3 flex gap-4">
+        <a href="../home/index.html" class="hover:underline">Home</a>
+        <a href="./action.html" class="hover:underline">Action</a>
+        <a href="#" class="hover:underline">Romantic</a>
+        <a href="#" class="hover:underline">Scientific</a>
+        <a href="#" class="hover:underline">Tops</a>
+      </div>
+    </nav>
+
+    <!-- Sections -->
+    <div
+      class="h-screen bg-black opacity-80 text-white flex flex-col justify-center items-center gap-6"
+    >
+      <h1 class="text-4xl font-bold">Action Movies</h1>
+      <p class="text-4xl">Explore the world of action movies</p>
+    </div>
+
+    <div
+      class=" bg-cover bg-fixed bg-center flex flex-col gap-12 items-center justify-center text-white py-6"
+      style="background-image: url('../images/action-bg.webp')"
+    >
+      <h2 class="text-3xl font-bold">Experience the Action!</h2>
+
+      <!-- cards -->
+      <div id="movies" class="flex gap-2 flex-wrap justify-center p-6">
+        
+      </div>
+    </div>
+
+    <!-- Card Section -->
+    <!-- <div class="flex justify-center py-10 bg-black text-white"></div> -->
+    <script src="./action.js"></script>
+  </body>
+</html>

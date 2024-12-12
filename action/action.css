@@ -1,0 +1,13 @@
+nav a{
+    margin-right: 20px;
+    color: rgb(246, 246, 240);
+    font-size: 18px;
+    text-align: center;
+     padding: 8px;
+     border-radius: 10px;
+}
+
+nav a:hover{
+    background-color:rgb(112, 133, 226);
+    color: black;
+}
