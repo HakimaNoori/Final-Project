@@ -4,10 +4,7 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 const moviesContainer = document.getElementById("movies");
 
-// Maximum number of pages to fetch
 const MAX_PAGES = 10;
-
-// Comedy genre ID from TMDB
 const COMEDY_GENRE_ID = 35;
 
 async function fetchMoviesByPage(page) {
@@ -31,7 +28,6 @@ async function fetchAllMovies() {
       allMovies = allMovies.concat(movies);
     }
 
-    // Filter for comedian movies
     const comedianMovies = allMovies.filter(movie => movie.genre_ids.includes(COMEDY_GENRE_ID));
 
     console.log("Fetched comedian movies:", comedianMovies);
@@ -51,9 +47,83 @@ function displayMovies(movies) {
       <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title}">
       <h3 style="font-family:sans">${movie.title}</h3>
     `;
+
+    movieElement.addEventListener("click", () => openMovieModal(movie));
     moviesContainer.appendChild(movieElement);
   });
 }
+
+function openMovieModal(movie) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title}">
+      <h2>${movie.title}</h2>
+      <p>${movie.overview || "No description available."}</p>
+      <p><strong>Original Title:</strong> ${movie.original_title || "N/A"}</p>
+      <p><strong>Language:</strong> ${movie.original_language.toUpperCase() || "N/A"}</p>
+      <p><strong>Release Date:</strong> ${movie.release_date || "N/A"}</p>
+      <p><strong>Genres:</strong> ${movie.genre_ids.join(", ") || "N/A"}</p>
+      <p><strong>Popularity:</strong> ${movie.popularity.toFixed(2) || "N/A"}</p>
+      <p><strong>Rating:</strong> ${movie.vote_average || "N/A"}/10</p>
+      <p><strong>Votes:</strong> ${movie.vote_count || 0}</p>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  const closeButton = modal.querySelector(".close-button");
+  closeButton.addEventListener("click", () => closeModal(modal));
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal(modal);
+  });
+}
+
+function closeModal(modal) {
+  document.body.removeChild(modal);
+}
+
+// Add basic styles for modal
+const style = document.createElement("style");
+style.textContent = `
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .modal-content {
+    background: white;
+    padding: 0px;
+    border-radius: 8px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+  }
+  .modal-content img {
+    width: 80%;
+    border-radius: 8px;
+    height:200px;
+    margin-bottom: 15px;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+`;
+
+document.head.appendChild(style);
 
 // Fetch and display all movies
 fetchAllMovies();
