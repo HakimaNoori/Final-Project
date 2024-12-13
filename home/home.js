@@ -43,7 +43,7 @@ function displayMovies(movies) {
     movieElement.classList.add("movie");
     movieElement.innerHTML = `
       <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title}">
-      <h3>${movie.title}</h3>
+      <h3 style="font-family:sans">${movie.title}</h3>
     `;
     moviesContainer.appendChild(movieElement);
   });

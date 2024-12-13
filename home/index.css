@@ -20,14 +20,13 @@ height: 50px;
     margin-top: 12px;
 }
 .pagelink a{
-    /* width:50px; */
     margin-right: 20px;
     color: rgb(246, 246, 240);
     font-size: 18px;
     text-align: center;
      padding: 8px;
      border-radius: 10px;
-     
+     text-decoration: none;
 }
 .pagelink a:hover{
     background-color:rgb(112, 133, 226);
