@@ -36,3 +36,10 @@ body {
     background-color: rgb(112, 133, 226);
     color: black;
 }
+ .movies {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 16px;
+     justify-content: center;
+     margin-top: 20px;
+ }
