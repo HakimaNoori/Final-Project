@@ -4,12 +4,15 @@ body{
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    /* color: white; */
+    /* background-color: black; */
+    /* opacity: 0.1; */
 }
 .nav{
     display: flex;
     width: 100%;
-    background-color: rgb(5, 7, 16);
+    background-color: rgb(10, 11, 17);
     justify-content: space-between;
     padding-right: 10px;
     position: fixed;
@@ -32,3 +35,11 @@ body{
         background-color:rgb(112, 133, 226);
         color: black;
     }
+
+    .movies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 20px;
+      }
