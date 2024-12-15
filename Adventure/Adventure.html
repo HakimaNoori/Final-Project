@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Project</title>
+    <link rel="stylesheet" href="Adventure.css">
+</head>
+
+<body>
+    <div class="nav">
+        <img src="/images/logo2.png" alt=" " width="80px" height="50px">
+        <div class="pagelink"><a href="/home/index.html">Home</a>
+            <a href="/comedian/comedy.html">Comedian</a>
+            <a href="#">Adventure</a>
+            <a>Action</a>
+            <a>Cientific</a>
+            <a>TopMovies</a>
+        </div>
+    </div><br>
+        <button class="btn" id="open-popup">Open Popup</button>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Movie Options</h2>
+            <input type="text" id="search-input" placeholder="Search movie by title..." />
+            <div class="popup-buttons">
+                <button id="search-btn">Search</button>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+        <div class="movies" id="movies"></div>
+        <script src="Adventure.js"></script>
+</body>
+
+</html>
+
