@@ -5,10 +5,10 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 const moviesContainer = document.getElementById("movies");
 
 // Maximum number of pages to fetch
-const MAX_PAGES = 10;
+const MAX_PAGES = 20;
 
-// Romance genre ID from TMDb
-const ROMANCE_GENRE_ID = 10749;
+// Adventure genre ID from TMDb
+const ADVENTURE_GENRE_ID = 12;
 
 async function fetchMoviesByPage(page) {
     try {
@@ -31,11 +31,11 @@ async function fetchAllMovies() {
             allMovies = allMovies.concat(movies);
         }
 
-        // Filter for romantic movies
-        const romanticMovies = allMovies.filter(movie => movie.genre_ids.includes(ROMANCE_GENRE_ID));
+        // Filter movies by Adventure genre
+        const adventureMovies = allMovies.filter(movie => movie.genre_ids.includes(ADVENTURE_GENRE_ID));
 
-        console.log("Romantic movies:", romanticMovies);
-        displayMovies(romanticMovies);
+        console.log("Adventure movies:", adventureMovies);
+        displayMovies(adventureMovies);
     } catch (error) {
         console.error("Error fetching all movies:", error);
         moviesContainer.innerHTML = `<p>Failed to load movies. Please try again later.</p>`;
@@ -57,3 +57,37 @@ function displayMovies(movies) {
 
 // Fetch and display all movies
 fetchAllMovies();
+
+
+
+const popup = document.getElementById("popup");
+const openPopupBtn = document.getElementById("open-popup");
+const closePopupBtn = document.getElementById("close-btn");
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+const removeBtn = document.getElementById("remove-btn");
+
+// Open popup
+openPopupBtn.addEventListener("click", () => {
+    popup.classList.remove("hidden");
+});
+
+// Close popup
+closePopupBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+});
+
+// Search functionality
+searchBtn.addEventListener("click", () => {
+    const query = searchInput.value.toLowerCase();
+    const movieElements = document.querySelectorAll(".movie");
+    movieElements.forEach(movie => {
+        const title = movie.querySelector("h3").innerText.toLowerCase();
+        if (!title.includes(query)) {
+            movie.style.display = "none";
+        } else {
+            movie.style.display = "block";
+        }
+    });
+    popup.classList.add("hidden");
+});
