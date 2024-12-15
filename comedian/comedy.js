@@ -85,7 +85,7 @@ function closeModal(modal) {
   document.body.removeChild(modal);
 }
 
-// Add basic styles for modal
+// Adding css styles for modal
 const style = document.createElement("style");
 style.textContent = `
   .modal {
@@ -101,18 +101,20 @@ style.textContent = `
     z-index: 1000;
   }
   .modal-content {
-    background: white;
+    background: rgb(206, 296, 260);
     padding: 0px;
-    border-radius: 8px;
-    max-width: 500px;
+    border-radius: 7px;
+    max-width: 400px;
     text-align: center;
     position: relative;
+    height:500px
+    // background:rgb(246, 246, 240);
   }
   .modal-content img {
-    width: 80%;
+    width: 100%;
     border-radius: 8px;
-    height:200px;
-    margin-bottom: 15px;
+    height:210px;
+    margin-bottom: 10px;
   }
   .close-button {
     position: absolute;
@@ -121,9 +123,10 @@ style.textContent = `
     font-size: 1.5rem;
     cursor: pointer;
   }
+    .modal-content p{
+    font-size:10px;
+    }
 `;
 
 document.head.appendChild(style);
-
-// Fetch and display all movies
 fetchAllMovies();

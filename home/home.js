@@ -1,9 +1,7 @@
 const API_KEY = "8afda1c4a556a9bd6b01d0e877f42929";
 const BASE_URL = "https://api.themoviedb.org/3";
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
-
 const moviesContainer = document.getElementById("movies");
-
 // Maximum number of pages to fetch
 const MAX_PAGES = 40;
 
