@@ -1,0 +1,208 @@
+/* Reset default styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Base font size */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #1b4b4b;
+  padding: 4rem; /* 4rem = 40px */
+}
+
+/* Heading styles */
+.heading {
+  color: #fff;
+  font-size: 2.4rem; /* 2.4rem = 24px */
+  margin-bottom: 4.8rem; /* 4.8rem = 48px */
+  text-align: center; /* Align heading to the center */
+}
+
+/* Container styles */
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5rem; /* 5rem = 50px */
+}
+
+/* Movie card styles */
+.movie-card {
+  border-radius: 1rem; /* 1rem = 10px */
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1); /* 0.4rem = 4px, 1.2rem = 12px */
+  overflow: hidden;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  background-color: #2c2d32;
+  color: #fff;
+}
+
+.movie-card:hover {
+  transform: translateY(-0.5rem); /* -0.5rem = -5px */
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-bottom: 0.3rem solid red; /* 0.3rem = 3px */
+}
+
+.movie-info {
+  padding: 1.5rem; /* 1.5rem = 15px */
+}
+
+.movie-title {
+  font-size: 1.4rem; /* 1.4rem = 14px */
+  margin-bottom: 2.4rem; /* 1.2rem = 12px */
+}
+
+.movie-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-imdb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* 0.4rem = 4px */
+}
+
+.movie-rating {
+  color: #f3ce13;
+  font-size: 1.2rem; /* 1.2rem = 12px */
+}
+
+.movie-year {
+  font-size: 1.2rem; /* 1.2rem = 12px */
+  color: #aaa;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.8rem; /* 4.8rem = 48px */
+}
+
+.page-item {
+  margin: 0 0.5rem; /* 0.5rem = 5px */
+}
+
+.page-link {
+  display: inline-block;
+  padding: 1rem 1.5rem; /* 1rem = 10px, 1.5rem = 15px */
+  border: 0.1rem solid #f3ce13; /* 0.1rem = 1px */
+  color: #f3ce13;
+  text-decoration: none;
+  border-radius: 0.5rem; /* 0.5rem = 5px */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+  background-color: #f3ce13;
+  color: white;
+}
+
+.active .page-link {
+  background-color: #f3ce13;
+  color: white;
+}
+
+/* Responsive Design */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* Show 3 columns */
+    gap: 3rem; /* 3rem = 30px */
+  }
+
+  .heading {
+    font-size: 2rem; /* 2rem = 20px */
+  }
+
+  .movie-title {
+    font-size: 1.6rem; /* 1.6rem = 16px */
+  }
+
+  .movie-rating {
+    font-size: 1.1rem; /* 1.1rem = 11px */
+  }
+
+  .movie-year {
+    font-size: 1.1rem; /* 1.1rem = 11px */
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem; /* 2rem = 20px */
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns */
+    gap: 2rem; /* 2rem = 20px */
+  }
+
+  .heading {
+    font-size: 1.8rem; /* 1.8rem = 18px */
+  }
+
+  .movie-title {
+    font-size: 1.3rem; /* 1.3rem = 13px */
+  }
+
+  .movie-rating {
+    font-size: 1rem; /* 1rem = 10px */
+  }
+
+  .movie-year {
+    font-size: 1rem; /* 1rem = 10px */
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* Show 1 column */
+    gap: 1.5rem; /* 1.5rem = 15px */
+  }
+
+  .heading {
+    font-size: 1.6rem; /* 1.6rem = 16px */
+  }
+
+  .movie-title {
+    font-size: 1.2rem; /* 1.2rem = 12px */
+  }
+
+  .movie-rating {
+    font-size: 0.9rem; /* 0.9rem = 9px */
+  }
+
+  .movie-year {
+    font-size: 0.9rem; /* 0.9rem = 9px */
+  }
+
+  .pagination {
+    padding: 2rem; /* 2rem = 20px */
+  }
+
+  .page-link {
+    padding: 0.8rem 1.2rem; /* 0.8rem = 8px, 1.2rem = 12px */
+  }
+}
