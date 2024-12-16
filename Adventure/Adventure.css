@@ -7,35 +7,32 @@ body {
     align-items: center;
 }
 
-.nav {
+.nav{
     display: flex;
     width: 100%;
-    background-color: rgb(5, 7, 16, 0.7);
+    background-color: rgb(10, 11, 17);
     justify-content: space-between;
     padding-right: 10px;
     position: fixed;
     height: 50px;
-}
-
-.pagelink {
-    margin-top: 12px;
-}
-
-.pagelink a {
-    /* width:50px; */
-    margin-right: 20px;
-    color: rgb(246, 246, 240);
-    font-size: 18px;
-    text-align: center;
-    padding: 8px;
-    border-radius: 10px;
-
-}
-
-.pagelink a:hover {
-    background-color: rgb(112, 133, 226);
-    color: black;
-}
+    }
+    /* .pagelink{
+        margin-top: 1px;
+    } */
+    .pagelink a{
+        margin-right: 20px;
+        color: rgb(246, 246, 240);
+        font-size: 18px;
+        text-align: center;
+         padding: 8px;
+         border-radius: 10px;
+         text-decoration: none;
+    }
+    .pagelink a:hover{
+        background-color:rgb(112, 133, 226);
+        color: black;
+        text-decoration: underline;
+    }
 
 .movies {
     display: flex;
