@@ -71,10 +71,17 @@ body{
         text-align: center;
         margin-top: 80px;
       }
-      p{
+      .descripmodal{
         text-align: center;
         color: rgb(59, 55, 62);
         font-size: 20px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       }
+      .footer {
+        padding: 5px 0;
+        width: 100%;
+        background-color: rgb(5, 7, 16);
+        color: white;
+        text-align: center;
+    }

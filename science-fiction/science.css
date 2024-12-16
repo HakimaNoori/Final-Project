@@ -64,3 +64,10 @@ h1 {
 .movie img:hover {
   transform: scale(0.9);
 }
+.footer {
+  padding: 5px 0;
+  width: 100%;
+  background-color: rgb(5, 7, 16);
+  color: white;
+  text-align: center;
+}
