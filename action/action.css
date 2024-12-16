@@ -1,4 +1,4 @@
-nav a{
+/* nav a{
     margin-right: 20px;
     color: rgb(246, 246, 240);
     font-size: 18px;
@@ -10,4 +10,16 @@ nav a{
 nav a:hover{
     background-color:rgb(112, 133, 226);
     color: black;
+} */
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #f3ce13;
+}
+.main-nav-link.active {
+  background-color: #f3ce13;
+  color: #000;
+  border: 1px solid #f3ce13;
+  border-radius: 2px;
+  padding: 6px 20px;
 }

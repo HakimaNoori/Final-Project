@@ -28,10 +28,16 @@ body {
   border-radius: 10px;
   text-decoration: none;
 }
-.pagelink a:hover {
-  background-color: rgb(112, 133, 226);
-  color: black;
-  text-decoration: underline;
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #f3ce13;
+}
+.main-nav-link.active {
+  background-color: #f3ce13;
+  color: #000;
+  border: 1px solid #f3ce13;
+  border-radius: 2px;
+  padding: 6px 20px;
 }
 h1 {
   color: black;
