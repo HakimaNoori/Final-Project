@@ -4,12 +4,12 @@ body{
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background-color: rgb(201, 221, 186);
 }
 .nav{
     display: flex;
     width: 100%;
-    background-color: rgb(5, 7, 16);
+    background-color: rgb(10, 11, 17);
     justify-content: space-between;
     padding-right: 10px;
     position: fixed;
@@ -19,7 +19,6 @@ body{
         margin-top: 12px;
     }
     .pagelink a{
-        /* width:50px; */
         margin-right: 20px;
         color: rgb(246, 246, 240);
         font-size: 18px;
@@ -32,3 +31,49 @@ body{
         background-color:rgb(112, 133, 226);
         color: black;
     }
+
+    .movies {
+        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-top: auto;
+      }
+      .movie {
+        width: 250px;
+        text-align: center;
+      }
+      .movie img {
+        width: 100%;
+        height: 240px;
+        border-radius: 8px;
+        transition: all 2s 0s;
+      }
+      .movie img:hover{
+        transform: scale(1.1);
+      }
+      .movie h3{
+        background-color: rgb(174, 190, 185);
+        border-radius: 5px;
+        padding: 4px 0px;
+        color: rgb(7, 7, 7);
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgb(17, 164, 17);
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 80px;
+      }
+      p{
+        text-align: center;
+        color: rgb(59, 55, 62);
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
