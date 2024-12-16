@@ -14,11 +14,64 @@ body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #555;
   background-color: #1b4b4b;
-  padding: 4rem; /* 4rem = 40px */
 }
 
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  width: 7.4rem;
+  height: 5.2rem;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  padding: 1.2rem 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #f3ce13;
+}
+.main-nav-link.active {
+  background-color: #f3ce13;
+  color: #000;
+  border: 1px solid #f3ce13;
+  border-radius: 2px;
+  padding: 0.8rem 1.8rem;
+}
+.section-movie {
+  padding: 4rem;
+}
 /* Heading styles */
 .heading {
   color: #fff;
@@ -119,6 +172,15 @@ body {
 .active .page-link {
   background-color: #f3ce13;
   color: white;
+}
+.footer {
+  padding: 1.6rem 0;
+  width: 100%;
+  background-color: rgb(5, 7, 16);
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 /* Responsive Design */
