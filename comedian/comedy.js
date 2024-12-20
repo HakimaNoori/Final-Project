@@ -84,7 +84,7 @@ function openMovieModal(movie) {
 function closeModal(modal) {
   document.body.removeChild(modal);
 }
-
+// 
 // Adding css styles for modal
 const style = document.createElement("style");
 style.textContent = `
